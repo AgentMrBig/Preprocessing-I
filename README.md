@@ -1,9 +1,9 @@
 # Preprocessing I: Digital Resume
-
+ 
 For this project you will be building a digital resume from scratch. You will be required to use specific preprocessing skills to accomplish your tasks.  
 
 ## Task 1: Set Up The Project With Git
-
+ 
 - [ ] Create a forked copy of this project.
 - [ ] Add your project manager as collaborator on Github.
 - [ ] Clone your OWN version of the repository (Not Lambda's by mistake!).
