@@ -54,6 +54,232 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	
 }
+
+/* START my less - Eric Hendrix */
+
+/* My fonts */
+@mainFont: 'Varela Round', sans-serif;
+
+/* My color Palette */
+@color1: #8A91A6;
+@color2: #636D90;
+@color3: #253467;
+@color4: #0E1F55;
+
+/* START debug styles */
+/* debug colors */
+@debug1: red;
+@debug2: pink;
+@debug3: blue;
+@debug4: green;
+
+.debug1{
+	border: solid 1px @debug1; 
+}
+
+.debug2{
+	border: solid 1px @debug2; 
+}
+
+.debug3{
+	border: solid 1px @debug3; 
+}
+
+.debug4{
+	border: solid 1px @debug4; 
+}
+
+
+/* END debug styles */
+
+/* START table styles */
+table {
+	font-family: arial, sans-serif;
+	border-collapse: collapse;
+	width: 100%;
+  }
+  
+  td, th {
+	border: 1px solid #dddddd;
+	text-align: left;
+	padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+	background-color: #dddddd;
+  }
+  /* END table styles */
+
+.flexConCenter{
+	display: flex;
+	justify-content: center;
+}
+
+.flexConCol{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+
+
+.mainContainer{
+	font-family: @mainFont; 
+	Padding: 0px;
+
+	
+
+	/* Nav Stuff Below */
+	header nav{
+		margin: 0 auto;
+		width: 100%;
+		
+		padding:10px;
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		flex-direction: row;
+
+		ul{
+			list-style: none;
+			display:flex;
+			text-align: center;
+			padding: 0;
+			margin: 0;
+		}
+	
+		a{
+			padding: 10px;
+			text-decoration: none;
+			color: black;
+			display: block;
+			&:hover, &:focus {
+				background: @color1;
+				color: black;
+			}
+		}	
+	}
+
+	.navItem{
+		flex: 1;
+	}
+	/* Nav Stuff Above */
+
+	/* main Stuff Below */
+	
+	
+
+	.topMain{
+		.flexConCenter;
+		justify-content: center;
+		flex-direction: column;
+
+		.intro{
+			.flexConCenter;
+			text-align: center;
+			padding: 50px;
+			color: black;
+			font-size: 20pt;
+			background: @color1;
+			border-radius: 20px;
+			margin-left: 40px;
+			margin-right: 40px;
+		}
+
+		.skills{
+			.flexConCenter;
+			padding: 20px;
+			
+			h1{
+				font-size: 20pt;
+			}
+			
+			/* Tooltip container */
+			.tooltip {
+				position: relative;
+				display: inline-block;
+				}
+			
+			/* Tooltip text */
+			.tooltip .tooltiptext {
+				visibility: hidden;
+				width: 120px;
+				background-color:@color3;
+				color: #fff;
+				text-align: center;
+				padding: 5px 0;
+				border-radius: 6px;
+			
+				/* Position the tooltip text - see examples below! */
+				position: absolute;
+				z-index: 1;
+			}
+			
+			/* Show the tooltip text when you mouse over the tooltip container */
+			.tooltip:hover .tooltiptext {
+				visibility: visible;
+			}
+
+			ul{
+				
+				.flexConCenter;
+				justify-content: center;
+				flex-direction: column;
+				align-items: left;
+				width: 100%;
+	
+				li{
+					
+					padding: 20px;
+					
+					a{
+						
+						color: black;
+						padding: 10px;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+
+		.workHistory{
+			.flexConCol;
+			text-align: center;
+			padding-left: 40px;
+			padding-right: 40px;
+			width: 100%;
+
+			article{
+				padding: 20px;
+				font-size: 15pt;
+			}
+			
+		}
+	}
+
+	
+	/* main Stuff Above */
+
+
+
+	footer{
+		background:@color2;
+		width: 100%;
+		height: 10%;
+		
+	}
+	
+}
+
+
+
+
+
+
+
+
+
 
