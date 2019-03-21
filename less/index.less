@@ -4,282 +4,530 @@
    License: none (public domain)
 */
 
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed, 
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
-	display: block;
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
-ol, ul {
-	list-style: none;
+ol,
+ul {
+  list-style: none;
 }
-blockquote, q {
-	quotes: none;
+blockquote,
+q {
+  quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
-	content: '';
-	content: none;
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-html, body {
-	height: 100%;
-	
+html,
+body {
+  height: 100%;
 }
 
 /* START my less - Eric Hendrix */
 
 /* My fonts */
-@mainFont: 'Varela Round', sans-serif;
+@mainFont: "Varela Round", sans-serif;
 
 /* My color Palette */
-@color1: #8A91A6;
-@color2: #636D90;
+@color1: #8a91a6;
+@color2: #636d90;
 @color3: #253467;
-@color4: #0E1F55;
+@color4: #0e1f55;
+@color5: rgb(22, 22, 22);
+@color6: white;
 
-/* START debug styles */
-/* debug colors */
-@debug1: red;
-@debug2: pink;
-@debug3: blue;
-@debug4: green;
+@mobileMaxWidth: 500px;
 
-.debug1{
-	border: solid 1px @debug1; 
+// Mixin
+.responsive(@mobileMaxWidth; @rules) {
+  @media only screen and (max-width: @mobileMaxWidth) {
+    @rules();
+  }
 }
 
-.debug2{
-	border: solid 1px @debug2; 
+.flex(@direction, @justifyContent, @alignItems) {
+  display: flex;
+  flex-direction: @direction;
+  justify-content: @justifyContent;
+  align-items: @alignItems;
 }
-
-.debug3{
-	border: solid 1px @debug3; 
-}
-
-.debug4{
-	border: solid 1px @debug4; 
-}
-
-
-/* END debug styles */
 
 /* START table styles */
 table {
-	font-family: arial, sans-serif;
-	border-collapse: collapse;
-	width: 100%;
-  }
-  
-  td, th {
-	border: 1px solid #dddddd;
-	text-align: left;
-	padding: 8px;
-  }
-  
-  tr:nth-child(even) {
-	background-color: #dddddd;
-  }
-  /* END table styles */
-
-.flexConCenter{
-	display: flex;
-	justify-content: center;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
 }
 
-.flexConCol{
-	display: flex;
-	justify-content: center;
-	flex-direction: column;
+td,
+th {
+  border: 1px solid @color1;
+  text-align: left;
+  padding: 8px;
 }
 
+tr:nth-child(1) {
+  background-color: @color1;
+  color: black;
+  font-size: 15pt;
+}
 
+/* END table styles */
 
-.mainContainer{
-	font-family: @mainFont; 
-	Padding: 0px;
+.flexConCenter {
+  display: flex;
+  justify-content: center;
+}
 
-	
+.flexConCol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
 
-	/* Nav Stuff Below */
-	header nav{
-		margin: 0 auto;
-		width: 100%;
-		
-		padding:10px;
-		display: flex;
-		justify-content: center;
-		flex-wrap: wrap;
-		flex-direction: row;
+* {
+}
 
-		ul{
-			list-style: none;
-			display:flex;
-			text-align: center;
-			padding: 0;
-			margin: 0;
-		}
-	
-		a{
-			padding: 10px;
-			text-decoration: none;
-			color: black;
-			display: block;
-			&:hover, &:focus {
-				background: @color1;
-				color: black;
-			}
-		}	
-	}
+.mainContainer {
+  font-family: @mainFont;
+  padding: 0px;
+  background: @color5;
+  color: @color6;
 
-	.navItem{
-		flex: 1;
-	}
-	/* Nav Stuff Above */
+  /* Nav Stuff Below */
+  header nav {
+    color: @color6;
+    margin: 0 auto;
+    width: 100%;
 
-	/* main Stuff Below */
-	
-	
+    padding: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    flex-direction: row;
+    .flex(row, space-around, center);
 
-	.topMain{
-		.flexConCenter;
-		justify-content: center;
-		flex-direction: column;
+    ul {
+      list-style: none;
+      display: flex;
+      text-align: center;
+      padding: 0;
+      margin: 0;
+    }
 
-		.intro{
-			.flexConCenter;
-			text-align: center;
-			padding: 50px;
-			color: black;
-			font-size: 20pt;
-			background: @color1;
-			border-radius: 20px;
-			margin-left: 40px;
-			margin-right: 40px;
-		}
+    a {
+      padding: 10px;
+      padding-left: 40px;
+      padding-right: 40px;
+      text-decoration: none;
+      color: @color6;
+      display: flex;
+      border-radius: 20%;
 
-		.skills{
-			.flexConCenter;
-			padding: 20px;
+      &:hover,
+      &:focus {
+        color: @color6;
+      }
+    }
+  }
+
+  .navItem {
+    flex: 1;
+  }
+  /* Nav Stuff Above */
+
+  /* main Stuff Below */
+
+  .topMain {
+    .flexConCenter;
+    justify-content: center;
+    flex-direction: row;
+
+    .responsive(@mobileMaxWidth, {flex-wrap: wrap;});
+
+    .intro {
+      .flexConCenter;
+      text-align: center;
+      padding: 50px;
+      color: @color6;
+      font-size: 20pt;
+      background: @color1;
+      border-radius: 20px;
+      margin-left: 40px;
+      margin-right: 40px;
+      width: 40%;
+      min-width: 400px;
+
+      .portrait {
+        width: 200px;
+        height: 200px;
+        border-radius: 25%;
+        border: solid 10px rgb(130, 155, 180);
+      }
+
+      .medFont {
+        font-size: 15pt;
+      }
+    }
+
+    .skills {
+      .flexConCenter;
+      padding: 20px;
+
+      h1 {
+        font-size: 20pt;
+      }
+
+      /* Tooltip container */
+      .tooltip {
+        position: relative;
+        display: inline-block;
+      }
+
+      /* Tooltip text */
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: @color3;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 6px;
+
+        /* Position the tooltip text - see examples below! */
+        position: absolute;
+        z-index: 1;
+      }
+
+      /* Show the tooltip text when you mouse over the tooltip container */
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      ul {
+        .flexConCenter;
+        justify-content: center;
+        flex-direction: column;
+        align-items: left;
+        width: 100%;
+
+        li {
+          padding: 20px;
+
+          a {
+            color: @color6;
+            padding: 10px;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+
+    .workHistory {
+      .flexConCol;
+      text-align: center;
+      padding-left: 40px;
+      padding-right: 40px;
+      width: 100%;
+
+      article {
+        padding: 20px;
+        font-size: 15pt;
+      }
+    }
+  }
+
+  /* main Stuff Above */
+
+  #container:hover {
+    -webkit-animation: socialspin 5s linear 0s infinite alternate;
+  }
+
+  @-webkit-keyframes socialspin {
+    from {
+      -webkit-transform: rotate(0deg);
+    }
+    to {
+      -webkit-transform: rotateY(90deg);
+    }
+  }
+  @keyframes socialspin {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotateY(90deg);
+    }
+  }
+
+  .footer-distributed {
+    background-color: #292c2f;
+    box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+    box-sizing: border-box;
+    width: 100%;
+    font: bold 16px sans-serif;
+    text-align: left;
+
+    padding: 50px 60px 40px;
+    margin-top: 80px;
+    overflow: hidden;
+
+    /* Footer left */
+
+    .footer-left {
+			float: left;
 			
-			h1{
-				font-size: 20pt;
-			}
+    }
+
+    /* The company logo */
+
+    h3 {
+      color: #ffffff;
+      font: normal 36px "Cookie", cursive;
+      margin: 0 0 10px;
+    }
+
+    h3 span {
+      color: #5383d3;
+    }
+
+    /* Footer links */
+
+    .footer-links {
+      color: #ffffff;
+      margin: 0 0 10px;
+      padding: 0;
+
+      a {
+        display: inline-block;
+        line-height: 1.8;
+        text-decoration: none;
+        color: inherit;
+      }
+    }
+
+    .footer-company-name {
+      color: #8f9296;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 0;
+    }
+
+    /* Footer social icons */
+
+    .footer-icons {
+			margin-top: 40px;
 			
-			/* Tooltip container */
-			.tooltip {
-				position: relative;
+			a{
 				display: inline-block;
-				}
-			
-			/* Tooltip text */
-			.tooltip .tooltiptext {
-				visibility: hidden;
-				width: 120px;
-				background-color:@color3;
-				color: #fff;
-				text-align: center;
-				padding: 5px 0;
-				border-radius: 6px;
-			
-				/* Position the tooltip text - see examples below! */
-				position: absolute;
-				z-index: 1;
+      width: 35px;
+      height: 35px;
+      cursor: pointer;
+      background-color: #33383b;
+      border-radius: 2px;
+
+      font-size: 20px;
+      color: #ffffff;
+      text-align: center;
+      line-height: 35px;
+
+      margin-right: 3px;
+      margin-bottom: 5px;
 			}
-			
-			/* Show the tooltip text when you mouse over the tooltip container */
-			.tooltip:hover .tooltiptext {
-				visibility: visible;
+    }
+
+    
+
+    /* Footer Right */
+
+    .footer-right {
+			float: right;
+			p {
+				display: inline-block;
+				vertical-align: top;
+				margin: 15px 42px 0 0;
+				color: #ffffff;
+			}
+    }
+
+  
+
+    /* The contact form */
+
+    form {
+			display: inline-block;
+			input, textarea{
+				display: block;
+      border-radius: 3px;
+      box-sizing: border-box;
+      background-color: #1f2022;
+      box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+      border: none;
+      resize: none;
+
+      font: inherit;
+      font-size: 14px;
+      font-weight: normal;
+      color: #d1d2d2;
+
+      width: 400px;
+      padding: 18px;
 			}
 
-			ul{
-				
-				.flexConCenter;
-				justify-content: center;
-				flex-direction: column;
-				align-items: left;
-				width: 100%;
-	
-				li{
-					
-					padding: 20px;
-					
-					a{
-						
-						color: black;
-						padding: 10px;
-						text-decoration: none;
-					}
-				}
+			input {
+				height: 55px;
+				margin-bottom: 15px;
 			}
-		}
 
-		.workHistory{
-			.flexConCol;
-			text-align: center;
-			padding-left: 40px;
-			padding-right: 40px;
-			width: 100%;
-
-			article{
-				padding: 20px;
-				font-size: 15pt;
+			textarea{
+				height: 100px;
+      	margin-bottom: 20px;
 			}
-			
-		}
-	}
 
-	
-	/* main Stuff Above */
+			button {
+				border-radius: 3px;
+				background-color: #33383b;
+				color: #ffffff;
+				border: 0;
+				padding: 15px 50px;
+				font-weight: bold;
+				float: right;
+			}
+    }
 
+    
 
+    .footer-distributed ::-webkit-input-placeholder {
+      color: #5c666b;
+    }
 
-	footer{
-		background:@color2;
-		width: 100%;
-		height: 10%;
-		
-	}
-	
+    .footer-distributed ::-moz-placeholder {
+      color: #5c666b;
+      opacity: 1;
+    }
+
+    .footer-distributed :-ms-input-placeholder {
+      color: #5c666b;
+    }
+
+  
+  }
+
+  
 }
-
-
-
-
-
-
-
-
-
-
