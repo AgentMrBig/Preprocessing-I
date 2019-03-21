@@ -1,1 +1,437 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  height: 100%;
+}
+/* START my less - Eric Hendrix */
+/* My fonts */
+/* My color Palette */
+/* START table styles */
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+td,
+th {
+  border: 1px solid #8a91a6;
+  text-align: left;
+  padding: 8px;
+}
+tr:nth-child(1) {
+  background-color: #8a91a6;
+  color: black;
+  font-size: 15pt;
+}
+/* END table styles */
+.flexConCenter {
+  display: flex;
+  justify-content: center;
+}
+.flexConCol {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+.mainContainer {
+  font-family: "Varela Round", sans-serif;
+  padding: 0px;
+  background: #161616;
+  color: white;
+  /* Nav Stuff Below */
+  /* Nav Stuff Above */
+  /* main Stuff Below */
+  /* main Stuff Above */
+}
+.mainContainer header nav {
+  color: white;
+  margin: 0 auto;
+  width: 100%;
+  padding: 40px;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainContainer header nav ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.mainContainer header nav a {
+  padding: 10px;
+  padding-left: 40px;
+  padding-right: 40px;
+  text-decoration: none;
+  color: white;
+  display: flex;
+  border-radius: 20%;
+}
+.mainContainer header nav a:hover,
+.mainContainer header nav a:focus {
+  color: white;
+}
+.mainContainer .navItem {
+  flex: 1;
+}
+.mainContainer .topMain {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+@media only screen and (max-width: 500px) {
+  .mainContainer .topMain {
+    flex-wrap: wrap;
+  }
+}
+.mainContainer .topMain .intro {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  padding: 50px;
+  color: white;
+  font-size: 20pt;
+  background: #8a91a6;
+  border-radius: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  width: 40%;
+  min-width: 400px;
+}
+.mainContainer .topMain .intro .portrait {
+  width: 200px;
+  height: 200px;
+  border-radius: 25%;
+  border: solid 10px #829bb4;
+}
+.mainContainer .topMain .intro .medFont {
+  font-size: 15pt;
+}
+.mainContainer .topMain .skills {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  /* Tooltip container */
+  /* Tooltip text */
+  /* Show the tooltip text when you mouse over the tooltip container */
+}
+.mainContainer .topMain .skills h1 {
+  font-size: 20pt;
+}
+.mainContainer .topMain .skills .tooltip {
+  position: relative;
+  display: inline-block;
+}
+.mainContainer .topMain .skills .tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #253467;
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+  /* Position the tooltip text - see examples below! */
+  position: absolute;
+  z-index: 1;
+}
+.mainContainer .topMain .skills .tooltip:hover .tooltiptext {
+  visibility: visible;
+}
+.mainContainer .topMain .skills ul {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: left;
+  width: 100%;
+}
+.mainContainer .topMain .skills ul li {
+  padding: 20px;
+}
+.mainContainer .topMain .skills ul li a {
+  color: white;
+  padding: 10px;
+  text-decoration: none;
+}
+.mainContainer .topMain .workHistory {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  width: 100%;
+}
+.mainContainer .topMain .workHistory article {
+  padding: 20px;
+  font-size: 15pt;
+}
+.mainContainer #container:hover {
+  -webkit-animation: socialspin 5s linear 0s infinite alternate;
+}
+@-webkit-keyframes socialspin {
+  from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(90deg);
+  }
+}
+@keyframes socialspin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotateY(90deg);
+  }
+}
+.mainContainer .footer-distributed {
+  background-color: #292c2f;
+  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  width: 100%;
+  font: bold 16px sans-serif;
+  text-align: left;
+  padding: 50px 60px 40px;
+  margin-top: 80px;
+  overflow: hidden;
+  /* Footer left */
+  /* The company logo */
+  /* Footer links */
+  /* Footer social icons */
+  /* Footer Right */
+  /* The contact form */
+}
+.mainContainer .footer-distributed .footer-left {
+  float: left;
+}
+.mainContainer .footer-distributed h3 {
+  color: #ffffff;
+  font: normal 36px "Cookie", cursive;
+  margin: 0 0 10px;
+}
+.mainContainer .footer-distributed h3 span {
+  color: #5383d3;
+}
+.mainContainer .footer-distributed .footer-links {
+  color: #ffffff;
+  margin: 0 0 10px;
+  padding: 0;
+}
+.mainContainer .footer-distributed .footer-links a {
+  display: inline-block;
+  line-height: 1.8;
+  text-decoration: none;
+  color: inherit;
+}
+.mainContainer .footer-distributed .footer-company-name {
+  color: #8f9296;
+  font-size: 14px;
+  font-weight: normal;
+  margin: 0;
+}
+.mainContainer .footer-distributed .footer-icons {
+  margin-top: 40px;
+}
+.mainContainer .footer-distributed .footer-icons a {
+  display: inline-block;
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  background-color: #33383b;
+  border-radius: 2px;
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  line-height: 35px;
+  margin-right: 3px;
+  margin-bottom: 5px;
+}
+.mainContainer .footer-distributed .footer-right {
+  float: right;
+}
+.mainContainer .footer-distributed .footer-right p {
+  display: inline-block;
+  vertical-align: top;
+  margin: 15px 42px 0 0;
+  color: #ffffff;
+}
+.mainContainer .footer-distributed form {
+  display: inline-block;
+}
+.mainContainer .footer-distributed form input,
+.mainContainer .footer-distributed form textarea {
+  display: block;
+  border-radius: 3px;
+  box-sizing: border-box;
+  background-color: #1f2022;
+  box-shadow: 0 1px 0 0 rgba(255, 255, 255, 0.1);
+  border: none;
+  resize: none;
+  font: inherit;
+  font-size: 14px;
+  font-weight: normal;
+  color: #d1d2d2;
+  width: 400px;
+  padding: 18px;
+}
+.mainContainer .footer-distributed form input {
+  height: 55px;
+  margin-bottom: 15px;
+}
+.mainContainer .footer-distributed form textarea {
+  height: 100px;
+  margin-bottom: 20px;
+}
+.mainContainer .footer-distributed form button {
+  border-radius: 3px;
+  background-color: #33383b;
+  color: #ffffff;
+  border: 0;
+  padding: 15px 50px;
+  font-weight: bold;
+  float: right;
+}
+.mainContainer .footer-distributed .footer-distributed ::-webkit-input-placeholder {
+  color: #5c666b;
+}
+.mainContainer .footer-distributed .footer-distributed ::-moz-placeholder {
+  color: #5c666b;
+  opacity: 1;
+}
+.mainContainer .footer-distributed .footer-distributed :-ms-input-placeholder {
+  color: #5c666b;
+}

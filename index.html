@@ -7,6 +7,8 @@
   <title>My Resume</title>
 
   <link rel="stylesheet" href="css/index.css">
+  <link href="https://fonts.googleapis.com/css?family=Varela+Round" rel="stylesheet">
+  <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
 
   <!--[if lt IE 9]>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
@@ -14,6 +16,153 @@
 </head>
 
 <body>
-  <h1>My Resume</h1>
+  <div class="mainContainer">
+      
+    <header class="myHeader">
+      <nav class="">
+          <ul>
+              <li class="navItem home"><a href="#">Home</a></li>
+              <li class="navItem tutorials"><a class="active" href="https://erichendrix.dev/">Portfolio</a></li>
+              <li class="navItem about"><a href="#">Pricing</a></li>
+              <li class="navItem news"><a href="#">About</a></li>
+              <li class="navItem contact"><a href="#">Contact</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <main>
+      <div class="topMain">
+        <div class="intro">
+          <article>
+            <img class="portrait" src="img\me.jpg" alt="" />
+              <h1>Hello, my name is Eric. </h1>
+              <br>
+              <p class="medFont">
+                I'm excited about code. I enjoy creating new system and solving tricky problems.
+                Are your considering adding a Software Engineer to your team? You should take a look 
+                at my information. If you think you may be interested please fill free
+                to contact me using the contact form at the bottom of the page.
+
+              </p>
+              <p></p>
+              <span id="text"></span>
+              <span class="terminal"></span>
+              
+          </article>
+          
+
+        </div>
+        
+        <div>
+          <!-- <video class="" width="100%" height="100%" autoplay loop muted>
+            <source src="video\anime_rain_1080p.mp4" type="video/mp4">     
+            </video> -->
+            
+        </div>
+
+        <div class="skills"> 
+            <ul>
+              <li><h1><bold>My Skillset</bold></h1></li>
+              <li>
+                <a class="tooltip">HTML
+                  <span class="tooltiptext">5 years experience!</span>
+                </a>
+              </li>
+              
+              <li><a class="tooltip">CSS<span class="tooltiptext">5 years experience!</span>
+              </a></li>
+              <li><a class="tooltip">Less<span class="tooltiptext">5 years experience!</span>
+              </a></li>
+              <li><a class="tooltip">Javascript<span class="tooltiptext">5 years experience!</span>
+              </a></li>
+              <li><a class="tooltip">Python<span class="tooltiptext">5 years experience!</span>
+              </a></li>
+              <li><a class="tooltip">React<span class="tooltiptext">5 years experience!</span>
+              </a></li>
+            </ul>
+        </div>
+    
+        <div class="workHistory">
+            <article>
+              <h1>Work History</h1>
+            </article>
+            <table><tr><td>Employer</td><td>Role</td><td>Dates</td></tr>
+              <tr><td>Living Stone Creations</td>
+              <td>CAD Drafter and CNC Operator</td>
+              <td>2014 - 2019</td>
+              </tr>
+              <tr>
+              <td>Self Employeed</td>
+              <td>Hustler</td>
+              <td>2012 - 2014</td>
+              </tr>
+              <tr>
+                  <td>Medco</td>
+                  <td>Customer Support/Tech support</td>
+                  <td>2011 - 2012</td>
+                  </tr>
+              <tr>
+                  <td>Lorum</td>
+                  <td>Ipsom</td>
+                  <td>1980 - 2011</td>
+                  </tr>
+              </table>
+        </div>
+  
+      </div>
+
+    </main>
+    <footer class="footer-distributed">
+
+        <div class="footer-left">
+  
+          <h3>Hire <span>Me</span></h3>
+  
+          <p class="footer-links">
+            <a href="#">Home</a>
+            ·
+            <a href="https://erichendrix.dev/">Portfolio</a>
+            ·
+            <a href="#">Pricing</a>
+            ·
+            <a href="#">About</a>
+            ·
+            
+            <a href="#">Contact</a>
+          </p>
+  
+          <p class="footer-company-name">Eric Hendrix &copy; 2019</p>
+  
+          <div class="footer-icons">
+  
+            <a href="#"><i class="fa fa-facebook"></i></a>
+            <a href="#"><i class="fa fa-twitter"></i></a>
+            <a href="#"><i class="fa fa-linkedin"></i></a>
+            <a href="#"><i class="fa fa-github"></i></a>
+  
+          </div>
+  
+        </div>
+  
+        <div class="footer-right">
+  
+          <p>Contact Us</p>
+  
+          <form action="#" method="post">
+  
+            <input type="text" name="email" placeholder="Email" />
+            <textarea name="message" placeholder="Message"></textarea>
+            <button>Send</button>
+  
+          </form>
+  
+        </div>
+  
+      </footer>
+  
+  </div>
+
+  <script src="js/typewriting.min.js"></script>
+  <script src="js/typing.js"></script>
 </body>
 </html>
